@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import os
 import time
 import random
  
@@ -43,7 +44,9 @@ async def 야(ctx):
 @app.command()
 async def 환영해줘(ctx, *, uname):
     await ctx.send(uname+"님, 반가워요!")
-    
-app.run('NzgxMzczMTQzOTM5OTQwMzky.X78scg.8SqmQH4VeHgdszJUCiK-VGE6Eyo')
+
+  
+access_token = os.environ["BOT_TOKEN"]
+app.run(access_token)
 
 
